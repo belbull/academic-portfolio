@@ -71,8 +71,7 @@ const work = await Promise.all(
               aria-lable="UIUC Social Spaces Lab Homepage"
               external>
               Karrie Karahalios</Link
-            >. I am also a proud liberal arts alum, as I attended Bowdoin
-            College for undergrad.
+            >. I am also a proud Bowdoin alum - GoUBears!
           </p>
         </article>
       </section>
@@ -95,20 +94,22 @@ const work = await Promise.all(
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">Projects</h5>
+          <div class="text-2xl font-semibold text-black dark:text-white">
+            👩🏾‍💻 Projects
+          </div>
           <Link href="/work"> See all work </Link>
         </div>
         <ul class="flex flex-col space-y-4">
           {
             work.map((entry) => (
               <li>
-                <div class="text-sm opacity-75">
-                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+                <div class="text-md font-semibold text-black dark:text-white">
+                  <Link href={entry.data.url}>{entry.data.title}</Link>
                 </div>
-                <div class="font-semibold text-black dark:text-white">
-                  {entry.data.company}
+                <div class="mt-1 text-sm">{entry.data.authors}</div>
+                <div class="mt-1 text-sm lowercase italic">
+                  {entry.data.label}
                 </div>
-                <div class="text-sm opacity-75">{entry.data.role}</div>
                 <article>
                   <entry.Content />
                 </article>
@@ -118,7 +119,7 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      <section class="animate space-y-6">
+      <!-- <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Recent projects
@@ -134,7 +135,7 @@ const work = await Promise.all(
             ))
           }
         </ul>
-      </section>
+      </section> -->
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
