@@ -1,16 +1,17 @@
 import type { Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
-  NAME: "Astro Nano",
-  EMAIL: "markhorn.dev@gmail.com",
+  NAME: "👩🏾‍💻 Beleicia B.",
+  EMAIL: "beleicia@cs.stanford.edu",
   NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_WORKS_ON_HOMEPAGE: 2,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
+  NUM_WORKS_ON_HOMEPAGE: 10,
+  NUM_PROJECTS_ON_HOMEPAGE: 0,
 };
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
+  DESCRIPTION:
+    "Beleicia is a Ph.D. Candidate at Stanford that explores design methods for community-centered design.",
 };
 
 export const BLOG: Metadata = {
@@ -25,20 +26,21 @@ export const WORK: Metadata = {
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
-  DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
+  DESCRIPTION:
+    "A collection of my projects, with links to repositories and demos.",
 };
 
 export const SOCIALS: Socials = [
-  { 
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
+  {
+    NAME: "curriculum vitae",
+    HREF: "https://scholar.google.com/citations?user=OyE0sDYAAAAJ",
   },
-  { 
-    NAME: "github",
-    HREF: "https://github.com/markhorn-dev"
+  {
+    NAME: "google scholar",
+    HREF: "https://scholar.google.com/citations?user=OyE0sDYAAAAJ",
   },
-  { 
+  {
     NAME: "linkedin",
-    HREF: "https://www.linkedin.com/in/markhorn-dev",
-  }
+    HREF: "https://www.linkedin.com/in/beleiciabullock",
+  },
 ];
