@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
+import Authors from "@components/Authors.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
@@ -106,7 +107,9 @@ const work = await Promise.all(
                 <div class="text-md font-semibold text-black dark:text-white">
                   <Link href={entry.data.url}>{entry.data.title}</Link>
                 </div>
-                <div class="mt-1 text-sm">{entry.data.authors}</div>
+                <div class="mt-1 text-sm">
+                  <Authors authorStr={entry.data.authors} />
+                </div>
                 <div class="mt-1 text-sm lowercase italic">
                   {entry.data.label}
                 </div>

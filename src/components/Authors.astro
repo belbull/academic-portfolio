@@ -1,0 +1,22 @@
+---
+type Props = {
+  authorStr?: string;
+};
+
+const { authorStr } = Astro.props;
+
+const authors = authorStr?.split(",").map((name) => name.trim());
+---
+
+<div>
+  {
+    authors.map((name, index) => (
+      <span
+        class="mx-0"
+        key={index}>
+        {name === "Beleicia Bullock" ? <strong>{name}</strong> : name}
+        {index < authors.length - 1 ? "-" : ""}
+      </span>
+    ))
+  }
+</div>
